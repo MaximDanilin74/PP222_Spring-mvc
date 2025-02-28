@@ -28,7 +28,7 @@
             <td th:text="${user.age}"></td>
             <td th:text="${user.email}"></td>
             <td>
-                <a href="@{/edit(id=${user.id})}" class="btn btn-warning">Edit</a>
+                <a th:href="@{/edit(id=${user.id})}" class="btn btn-warning">Edit</a>
                 <form th:action="@{/delete(id=${user.id})}" method="post" class="d-inline">
                     <button type="submit" class="btn btn-danger" onclick="return confirm('Вы уверены, ' +
                      'что хотите удалить пользователя?')">Delete</button>
